@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {Header} from "./components/header/header";
+import {ListView} from "./components/list-view/list-view";
+import {useProducts} from "./core/hooks/useProducts";
+import {ProductContext} from "./core/context/product.context";
 
 function App() {
+  const state = useProducts();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ProductContext.Provider value={state}>
+      <div className="App">
+        <Header />
+        <ListView />
+      </div>
+    </ProductContext.Provider>
   );
 }
 

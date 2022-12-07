@@ -1,0 +1,16 @@
+@use "src/assets/scss/colors";
+
+.header {
+  align-items: center;
+  background-color: colors.$backgroundHeader;
+  color: white;
+  display: flex;
+  height: 5em;
+  justify-content: space-between;
+  padding: 0 1em;
+
+  .logo {
+    height: 90%;
+    pointer-events: none;
+  }
+}
