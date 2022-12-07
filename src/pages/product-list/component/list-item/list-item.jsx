@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 export const ListItem = (props) => {
   const {product} = props;
-  const thumbnailUrl = require(`../../assets/images/${product.imageUrl}`);
+  const thumbnailUrl = require(`../../../../assets/images/${product.imageUrl}`);
 
   return (
     <Link to={`${product.id}`}>

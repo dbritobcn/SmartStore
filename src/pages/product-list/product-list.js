@@ -1,8 +1,8 @@
 import React from "react";
-import {ListView} from "../../components/list-view/list-view";
 import {Col, Container, Row} from "react-bootstrap";
-import {Breadcrumbs} from "../../components/breadcrumbs/breadcrumbs";
-import {SearchInput} from "../../components/search-input/search-input";
+import {Breadcrumbs} from "../../shared/components/breadcrumbs/breadcrumbs";
+import {SearchInput} from "./component/search-input/search-input";
+import {ListView} from "./component/list-view/list-view";
 
 export const ProductListPage = () => (
   <Container>

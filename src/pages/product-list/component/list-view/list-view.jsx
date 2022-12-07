@@ -1,8 +1,9 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {ProductService} from "../../core/product/product.service";
-import {ProductContext} from "../../core/context/product.context";
+import {Col, Row} from "react-bootstrap";
 import {ListItem} from "../list-item/list-item";
-import {Col} from "react-bootstrap";
+import {ProductService} from "../../../../core/product/product.service";
+import {ProductContext} from "../../../../core/context/product.context";
+import {LoadingSpinner} from "../../../../shared/components/loading-spinner/loading-spinner";
 
 export const ListView = () => {
   const productService = new ProductService();
@@ -11,14 +12,18 @@ export const ListView = () => {
     setProducts
   } = useContext(ProductContext);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     productService.getProductList().then(
       products => {
         setProducts(products);
         setFilteredProducts(products);
+        setLoading(false);
       }
-    );
+    ).catch(() => {
+      setLoading(false);
+    });
   }, []);
 
   useEffect(() => {
@@ -29,7 +34,12 @@ export const ListView = () => {
 
   return (
     <>
-      {!filteredProducts.length && <p>No products</p>}
+      {loading && (
+        <Row className="justify-content-center mt-5">
+          <LoadingSpinner/>
+        </Row>
+      )}
+      {!loading && !filteredProducts.length && <p>No products</p>}
       {filteredProducts.map(product => (
         <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-3">
           <ListItem product={product}></ListItem>

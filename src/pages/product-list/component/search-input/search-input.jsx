@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {Form} from "react-bootstrap";
-import {ProductContext} from "../../core/context/product.context";
+import {ProductContext} from "../../../../core/context/product.context";
 
 export const SearchInput = () => {
   const { setSearch } = useContext(ProductContext);
