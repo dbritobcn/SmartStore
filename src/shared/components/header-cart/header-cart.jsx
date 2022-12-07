@@ -2,8 +2,8 @@ import React, {useContext} from "react";
 import Image from "react-bootstrap/Image";
 import {Badge} from "react-bootstrap";
 import CartImage from '../../../assets/images/cart.svg';
-import './header-cart.scss'
 import {ProductContext} from "../../../core/context/product.context";
+import './header-cart.scss'
 
 export const HeaderCart = () => {
   const {state: {cartCount}} = useContext(ProductContext);

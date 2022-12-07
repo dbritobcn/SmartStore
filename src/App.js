@@ -1,6 +1,6 @@
 import {useProducts} from "./core/hooks/useProducts";
 import {ProductContext} from "./core/context/product.context";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {ErrorPage} from "./pages/error/error";
 import React from "react";
 import {RootPage} from "./pages/root/root";
@@ -17,6 +17,10 @@ function App() {
       element: <RootPage/>,
       errorElement: <ErrorPage/>,
       children: [
+        {
+          path: '',
+          element: <Navigate to="products" replace/>
+        },
         {
           path: "products/",
           element: <ProductListPage/>,

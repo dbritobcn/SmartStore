@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from "../../../assets/images/logo.svg";
 import "./header.scss";
 import Navbar from 'react-bootstrap/Navbar';
-import Image from 'react-bootstrap/Image'
 import {Container, Row} from "react-bootstrap";
 import {HeaderCart} from "../header-cart/header-cart";
+import {HeaderLogo} from "../header-logo/header-logo";
 
 export const Header = () => {
   return (
@@ -12,9 +11,9 @@ export const Header = () => {
       <Navbar className="h-100">
         <Container className="h-100">
           <Row className="justify-content-between align-items-center h-100 w-100">
-            <Image src={logo} className="header__logo" alt="logo" />
+            <HeaderLogo/>
+            <HeaderCart></HeaderCart>
           </Row>
-          <HeaderCart></HeaderCart>
         </Container>
       </Navbar>
     </div>
