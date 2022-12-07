@@ -34,22 +34,26 @@ export class Product {
   }
 
   static createFromDB(props) {
-    return new Product(
-      props.id,
-      props.brand,
-      props.model,
-      props.image_url,
-      props.price,
-      props.cpu,
-      props.ram,
-      props.so,
-      props.screen_resolution,
-      props.battery,
-      props.camera,
-      props.size,
-      props.weight,
-      props.colors,
-      props.storages
-    );
+    try {
+      return new Product(
+        props.id,
+        props.brand,
+        props.model,
+        props.image_url,
+        props.price,
+        props.cpu,
+        props.ram,
+        props.so,
+        props.screen_resolution,
+        props.battery,
+        props.camera,
+        props.size,
+        props.weight,
+        props.colors,
+        props.storages
+      );
+    } catch(e) {
+      throw new Error('Wrong product params');
+    }
   }
 }

@@ -6,4 +6,8 @@ export class ProductService {
   async getProductList() {
     return await this.productFacade.getList();
   }
+
+  async getProductDetail(productId) {
+    return await this.productFacade.getDetail(productId);
+  }
 }
