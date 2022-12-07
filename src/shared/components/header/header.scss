@@ -1,7 +1,11 @@
 @use "src/assets/scss/colors";
+@use "src/assets/scss/height";
 
 .header {
   background-color: colors.$backgroundHeader;
   color: white;
-  height: 5em;
+  height: height.$header;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }

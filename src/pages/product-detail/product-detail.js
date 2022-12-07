@@ -4,6 +4,7 @@ import {ProductService} from "../../core/product/product.service";
 import {Col, Container, Row} from "react-bootstrap";
 import {ProductImage} from "./components/product-image/product-image";
 import {LoadingSpinner} from "../../shared/components/loading-spinner/loading-spinner";
+import {Breadcrumbs} from "../../shared/components/breadcrumbs/breadcrumbs";
 
 export const ProductDetailPage = () => {
   const {productId} = useParams();
@@ -22,7 +23,8 @@ export const ProductDetailPage = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className="py-5">
+      <Breadcrumbs/>
       {!product && (
         <Row className="justify-content-center">
           <LoadingSpinner/>

@@ -7,7 +7,7 @@ import {HeaderLogo} from "../header-logo/header-logo";
 
 export const Header = () => {
   return (
-    <div className="header mb-5">
+    <div className="header">
       <Navbar className="h-100">
         <Container className="h-100">
           <Row className="justify-content-between align-items-center h-100 w-100">
