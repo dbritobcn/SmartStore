@@ -3,6 +3,7 @@ import {ProductService} from "../../core/product/product.service";
 import {ProductContext} from "../../core/context/product.context";
 import {ListItem} from "../list-item/list-item";
 import {Col, Container, Row} from "react-bootstrap";
+import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 export const ListView = () => {
   const productService = new ProductService();
@@ -21,6 +22,9 @@ export const ListView = () => {
 
   return (
     <Container>
+      <Row>
+        <Col><Breadcrumbs></Breadcrumbs></Col>
+      </Row>
       <Row>
         {!products.length && <p>No products</p>}
         {products.map(product => (
