@@ -1,0 +1,8 @@
+.list-item {
+  transition: all .2s ease;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 15px 0px #0003;
+  }
+}

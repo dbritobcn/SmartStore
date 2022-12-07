@@ -1,15 +1,19 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
+import {Card} from "react-bootstrap";
+import './list-item.scss';
 
 export const ListItem = (props) => {
   const { product } = props;
   const thumbnailUrl = require(`../../assets/images/${product.imageUrl}`);
 
   return (
-    <>
-      <p>{product.model}</p>
-      <p>{product.imageUrl}</p>
-      <Image src={thumbnailUrl} thumbnail={true}></Image>
-    </>
+    <Card className="list-item">
+      <Card.Img src={thumbnailUrl} className="my-3 mx-auto w-75"></Card.Img>
+      <Card.Body>
+        <Card.Subtitle>{product.brand}</Card.Subtitle>
+        <Card.Title>{product.model}</Card.Title>
+        <Card.Text>{product.price}€</Card.Text>
+      </Card.Body>
+    </Card>
   );
 }

@@ -54,7 +54,7 @@
     {
       "id": "0004",
       "brand": "Oppo",
-      "model": "Oppo Find X3 Neo",
+      "model": "Find X3 Neo",
       "image_url": "472715_7bcd16bd-97e7-44d8-a2b7-0f4a3d7efacd.webp",
       "price": 999,
       "cpu": "Core i5",
@@ -105,7 +105,7 @@
     {
       "id": "0007",
       "brand": "OnePlus",
-      "model": "OnePlus 8 Pro",
+      "model": "8 Pro",
       "image_url": "340903_b9342fad-8be0-432b-a622-b434382fcd9e.avif",
       "price": 899,
       "cpu": "Core i5",
@@ -122,7 +122,7 @@
     {
       "id": "0008",
       "brand": "OnePlus",
-      "model": "OnePlus Nord",
+      "model": "Nord",
       "image_url": "12b80d0b-7fdd-4aa4-9d95-520e53164777.avif",
       "price": 500,
       "cpu": "Core i5",

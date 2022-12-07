@@ -24,7 +24,7 @@ export const ListView = () => {
       <Row>
         {!products.length && <p>No products</p>}
         {products.map(product => (
-          <Col xs={12} md={8}>
+          <Col xs={6} md={3} className="mb-3">
             <ListItem key={product.id} product={product}></ListItem>
           </Col>
         ))}
