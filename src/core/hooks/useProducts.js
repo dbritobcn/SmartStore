@@ -2,7 +2,10 @@ import { useState } from "react";
 
 const initialState = {
   products: [],
-  cartCount: 0
+  cartCount: 0,
+  filters: {
+    search: ''
+  }
 }
 
 export const useProducts = () => {
@@ -15,8 +18,21 @@ export const useProducts = () => {
     });
   }
 
+  const setSearch = (payload: string) => {
+    const filters = {
+      ...state.filters,
+      search: payload,
+    };
+
+    setState({
+      ...state,
+      filters,
+    });
+  };
+
   return {
     state,
-    setProducts
+    setProducts,
+    setSearch
   }
 }
