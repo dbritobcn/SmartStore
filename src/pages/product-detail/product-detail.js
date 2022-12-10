@@ -7,6 +7,7 @@ import {LoadingSpinner} from "../../shared/components/loading-spinner/loading-sp
 import {Breadcrumbs} from "../../shared/components/breadcrumbs/breadcrumbs";
 import {ProductDescription} from "./components/product-description/product-description";
 import {ProductActions} from "./components/product-actions/product-actions";
+import {BackButton} from "../../shared/components/back-button/back-button";
 
 export const ProductDetailPage = () => {
   const {productId} = useParams();
@@ -32,6 +33,7 @@ export const ProductDetailPage = () => {
           <LoadingSpinner/>
         </Row>
       )}
+      <BackButton />
       {product && (
         <Row>
           <Col md={4} lg={6}>
