@@ -30,9 +30,17 @@ export const useProducts = () => {
     });
   };
 
+  const setCartCount = () => {
+    setState({
+      ...state,
+      cartCount: state.cartCount + 1
+    })
+  }
+
   return {
     state,
     setProducts,
-    setSearch
+    setSearch,
+    setCartCount
   }
 }

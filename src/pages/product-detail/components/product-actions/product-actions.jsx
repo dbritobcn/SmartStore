@@ -1,16 +1,19 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {ButtonSelector} from "../../../../shared/components/button-selector/button-selector";
 import {Button, Col, Row} from "react-bootstrap";
 import {ProductService} from "../../../../core/product/product.service";
+import {ProductContext} from "../../../../core/context/product.context";
 
 export const ProductActions = (props) => {
   const productService = new ProductService();
   const {id, colors, storages} = props.product;
+  const {setCartCount} = useContext(ProductContext);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedStorage, setSelectedStorage] = useState(null);
 
   const addToCart = async () => {
     await productService.addToCart({id, selectedColor, selectedStorage});
+    setCartCount();
   }
 
   return (
