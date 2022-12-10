@@ -1,0 +1,13 @@
+.product-description {
+  &__title {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  &__specifics {
+    font-size: .9rem;
+  }
+}

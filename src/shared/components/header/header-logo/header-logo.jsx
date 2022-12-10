@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
-import logo from "../../../assets/images/logo.svg";
+import logo from "../../../../assets/images/logo.svg";
 import {Link} from "react-router-dom";
 import './header-logo.scss';
 

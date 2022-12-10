@@ -2,8 +2,8 @@ import React from 'react';
 import "./header.scss";
 import Navbar from 'react-bootstrap/Navbar';
 import {Container, Row} from "react-bootstrap";
-import {HeaderCart} from "../header-cart/header-cart";
-import {HeaderLogo} from "../header-logo/header-logo";
+import {HeaderCart} from "./header-cart/header-cart";
+import {HeaderLogo} from "./header-logo/header-logo";
 
 export const Header = () => {
   return (

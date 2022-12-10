@@ -52,7 +52,7 @@ export class Product {
         props.colors,
         props.storages
       );
-    } catch(e) {
+    } catch {
       throw new Error('Wrong product params');
     }
   }

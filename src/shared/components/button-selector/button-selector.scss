@@ -1,0 +1,16 @@
+.button-selector {
+  &__button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__color-indicator {
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: block;
+    height: .8rem;
+    margin-left: .5rem;
+    width: .8rem;
+  }
+}

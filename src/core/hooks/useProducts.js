@@ -18,7 +18,7 @@ export const useProducts = () => {
     });
   }
 
-  const setSearch = (payload: string) => {
+  const setSearch = (payload) => {
     const filters = {
       ...state.filters,
       search: payload,

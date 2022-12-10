@@ -5,6 +5,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import {ProductImage} from "./components/product-image/product-image";
 import {LoadingSpinner} from "../../shared/components/loading-spinner/loading-spinner";
 import {Breadcrumbs} from "../../shared/components/breadcrumbs/breadcrumbs";
+import {ProductDescription} from "./components/product-description/product-description";
+import {ProductActions} from "./components/product-actions/product-actions";
 
 export const ProductDetailPage = () => {
   const {productId} = useParams();
@@ -32,10 +34,13 @@ export const ProductDetailPage = () => {
       )}
       {product && (
         <Row>
-          <Col xs={12} sm={4}>
+          <Col md={4} lg={6}>
             <ProductImage imageUrl={product.imageUrl}></ProductImage>
           </Col>
-          <Col xs={12} sm={8}></Col>
+          <Col md={8} lg={6}>
+            <ProductDescription product={product}></ProductDescription>
+            <ProductActions product={product}></ProductActions>
+          </Col>
         </Row>
       )}
     </Container>
