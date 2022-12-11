@@ -19,7 +19,7 @@ export class ProductService {
 }
 
 export const useProductList = () => {
-  const [state, setState] = useState(async () => {
+  const [state] = useState(async () => {
     let value = await cache.get();
     if (!value) {
       value = await facade.getList();

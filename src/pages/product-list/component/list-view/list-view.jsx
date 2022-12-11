@@ -1,12 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Col, Row} from "react-bootstrap";
 import {ListItem} from "../list-item/list-item";
-import {ProductService, useProductList} from "../../../../core/product/product.service";
+import {useProductList} from "../../../../core/product/product.service";
 import {ProductContext} from "../../../../core/context/product.context";
 import {LoadingSpinner} from "../../../../shared/components/loading-spinner/loading-spinner";
 
 export const ListView = () => {
-  const productService = new ProductService();
   const {
     state: {products, filters},
     setProducts

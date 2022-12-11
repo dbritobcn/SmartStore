@@ -6,10 +6,8 @@ import React from "react";
 import {RootPage} from "./pages/root/root";
 import {ProductDetailPage} from "./pages/product-detail/product-detail";
 import {ProductListPage} from "./pages/product-list/product-list";
-import {ProductService} from "./core/product/product.service";
 
 function App() {
-  const productService = new ProductService();
   const state = useProducts();
   const router = createBrowserRouter([
     {
@@ -19,24 +17,15 @@ function App() {
       children: [
         {
           path: '',
-          element: <Navigate to="products" replace/>,
-          // handle: {
-          //   crumbs: () => <Link to="products">Home</Link>,
-          // }
+          element: <Navigate to="products" replace/>
         },
         {
           path: "/products",
-          element: <ProductListPage/>,
-          // handle: {
-          //   crumbs: () => <Link to="products">Products</Link>,
-          // }
+          element: <ProductListPage/>
         },
         {
           path: "/products/:productId",
-          element: <ProductDetailPage/>,
-          // handle: {
-          //   crumb: (data) => <span>iPhone</span>,
-          // }
+          element: <ProductDetailPage/>
         },
       ]
     },

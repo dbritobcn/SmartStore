@@ -27,27 +27,31 @@ export const ProductDetailPage = () => {
 
   return (
     <Container className="py-5">
-      <Breadcrumbs/>
       {!product && (
         <Row className="justify-content-center">
           <LoadingSpinner/>
         </Row>
       )}
-      <Row>
-        <Col className="mb-3">
-          <BackButton />
-        </Col>
-      </Row>
       {product && (
-        <Row>
-          <Col md={4} lg={6}>
-            <ProductImage imageUrl={product.imageUrl}></ProductImage>
-          </Col>
-          <Col md={8} lg={6}>
-            <ProductDescription product={product}></ProductDescription>
-            <ProductActions product={product}></ProductActions>
-          </Col>
-        </Row>
+        <>
+          <Row>
+            <Breadcrumbs title={product.model}/>
+          </Row>
+          <Row>
+            <Col className="mb-3">
+              <BackButton/>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={4} lg={6}>
+              <ProductImage imageUrl={product.imageUrl}></ProductImage>
+            </Col>
+            <Col md={8} lg={6}>
+              <ProductDescription product={product}></ProductDescription>
+              <ProductActions product={product}></ProductActions>
+            </Col>
+          </Row>
+        </>
       )}
     </Container>
   )

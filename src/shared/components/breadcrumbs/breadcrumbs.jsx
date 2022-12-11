@@ -1,22 +1,37 @@
 import React from "react";
 import {Breadcrumb} from "react-bootstrap";
-import {Link, useMatches} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
-export const Breadcrumbs = () => {
-  let matches = useMatches();
-  let crumbs = matches
-    .filter((match) => {
-      return Boolean(match.handle?.crumb)
-    })
-    .map((match) => match.handle.crumb(match.data));
+export const Breadcrumbs = (props) => {
+  const {productId} = useParams();
+
+  const links = [
+    {
+      title: 'Home',
+      url: '/',
+    },
+    {
+      title: 'Products',
+      url: '/products',
+    },
+  ];
+
+  if (productId) {
+    links.push({
+      title: props.title || 'product',
+      url: `/products/${productId}`,
+    });
+  }
 
   return (
     <Breadcrumb>
-      <Breadcrumb.Item><small><Link to={'/'}>Home</Link></small></Breadcrumb.Item>
-      <Breadcrumb.Item><small>Iphone 11</small></Breadcrumb.Item>
-      {/*{crumbs.map((crumb, index) => (*/}
-      {/*  <Breadcrumb.Item key={index}><small>{crumb}</small></Breadcrumb.Item>*/}
-      {/*))}*/}
+      {links.map((link) => (
+        <Breadcrumb.Item key={link.url} linkAs={Link} linkProps={{ to: link.url }}>
+          <small>
+            {link.title}
+          </small>
+        </Breadcrumb.Item>
+      ))}
     </Breadcrumb>
   );
 }
