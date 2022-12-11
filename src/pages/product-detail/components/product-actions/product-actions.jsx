@@ -1,19 +1,18 @@
 import React, {useContext, useState} from "react";
 import {ButtonSelector} from "../../../../shared/components/button-selector/button-selector";
 import {Button, Col, Row} from "react-bootstrap";
-import {ProductService} from "../../../../core/product/product.service";
+import {addToCart} from "../../../../core/product/product.service";
 import {ProductContext} from "../../../../core/context/product.context";
 
 export const ProductActions = (props) => {
-  const productService = new ProductService();
   const {id, colors, storages} = props.product;
   const {setCartCount} = useContext(ProductContext);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedStorage, setSelectedStorage] = useState(null);
 
-  const addToCart = async () => {
-    await productService.addToCart({id, selectedColor, selectedStorage});
-    setCartCount();
+  const handleAddToCart = async () => {
+    const counter = await addToCart({id, selectedColor, selectedStorage});
+    setCartCount(counter);
   }
 
   return (
@@ -28,7 +27,7 @@ export const ProductActions = (props) => {
                       property="color"></ButtonSelector>
       <Row>
         <Col>
-          <Button variant="dark" size="lg" className="w-100" onClick={addToCart}>Add to cart</Button>
+          <Button variant="dark" size="lg" className="w-100" onClick={handleAddToCart}>Add to cart</Button>
         </Col>
       </Row>
     </div>

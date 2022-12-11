@@ -30,10 +30,10 @@ export const useProducts = () => {
     });
   };
 
-  const setCartCount = () => {
+  const setCartCount = (payload) => {
     setState({
       ...state,
-      cartCount: state.cartCount + 1
+      cartCount: payload
     })
   }
 

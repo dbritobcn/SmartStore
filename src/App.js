@@ -1,4 +1,4 @@
-import {useProducts} from "./core/hooks/useProducts";
+import {useProducts} from "./core/product/hooks/useProducts";
 import {ProductContext} from "./core/context/product.context";
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {ErrorPage} from "./pages/error/error";

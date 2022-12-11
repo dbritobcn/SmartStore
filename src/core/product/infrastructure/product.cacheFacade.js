@@ -1,10 +1,12 @@
 export class ProductCacheFacade {
+  expirationTime = 3600000;
+
   async get(key) {
     try {
       const value = localStorage.getItem(key);
       const parsedValue = JSON.parse(value);
       const now = new Date();
-      if (now.getTime() > parsedValue.expiry) {
+      if (parsedValue.expiry && now.getTime() > parsedValue.expiry) {
         localStorage.removeItem(key);
         return null;
       }
@@ -14,13 +16,18 @@ export class ProductCacheFacade {
     }
   }
 
-  async save(key, value, expiration = 3600000) {
+  async save(key, value, expiration = false) {
     try {
       const now = new Date();
-      localStorage.setItem(key, JSON.stringify({
-        data: value,
-        expiry: now.getTime() + expiration,
-      }));
+      const data = (expiration) ?
+        {
+          data: value,
+          expiry: now.getTime() + this.expirationTime,
+        } :
+        {
+          data: value
+        };
+      localStorage.setItem(key, JSON.stringify(data));
     } catch {
       throw new Error('Error saving cache data');
     }

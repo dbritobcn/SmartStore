@@ -29,12 +29,11 @@ export class ProductHttpFacade {
 
   async sendProduct(props) {
     try {
-      const cartCount = await fetch(`${process.env.REACT_APP_API_URL}/cart`, {
+      return await fetch(`${process.env.REACT_APP_API_URL}/cart`, {
         method: "POST",
         body: JSON.stringify(props)
       })
         .then(response => response.json());
-      console.log("COUNT: ", cartCount);
     } catch {
       throw new Error('Product not sent');
     }
