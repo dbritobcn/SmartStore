@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import {ProductService} from "../../core/product/product.service";
+import {useProductDetail} from "../../core/product/product.service";
 import {Col, Container, Row} from "react-bootstrap";
 import {ProductImage} from "./components/product-image/product-image";
 import {LoadingSpinner} from "../../shared/components/loading-spinner/loading-spinner";
@@ -11,12 +11,12 @@ import {BackButton} from "../../shared/components/back-button/back-button";
 
 export const ProductDetailPage = () => {
   const {productId} = useParams();
-  const productService = new ProductService();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
+  const [getProductDetail] = useProductDetail(productId)
 
   useEffect(() => {
-    productService.getProductDetail(productId).then(
+    getProductDetail.then(
       response => {
         setProduct(response);
       }

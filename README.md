@@ -11,3 +11,13 @@ Para arrancar el proyecto, debemos instalar las dependencias con el comando `npm
 Una vez tenemos las dependencias instaladas, usamos el comando `npm run server` para arrancar el local server en el [puerto 8000](http://localhost:8000).
 
 Una vez el servidor local está funcionando, ya podemos usar el comando `npm start` para arrancar el proyecto bajo un entorno de desarrollo. Esto nos habilitará el enlace [http://localhost:3000](http://localhost:3000).
+
+## Scripts disponibles
+
+### `npm start`
+
+### `npm test`
+
+### `npm run build`
+
+### `npm run lint`

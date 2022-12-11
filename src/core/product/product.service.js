@@ -7,10 +7,6 @@ const facade = new ProductHttpFacade();
 const cache = new ProductCacheFacade();
 
 export class ProductService {
-  async getProductDetail(productId) {
-    return await facade.getDetail(productId);
-  }
-
   async addToCart(props) {
     return await facade.sendProduct(
       ProductDto.sendProductToCart(props)
@@ -20,13 +16,26 @@ export class ProductService {
 
 export const useProductList = () => {
   const [state] = useState(async () => {
-    let value = await cache.get();
+    let value = await cache.get('products');
     if (!value) {
       value = await facade.getList();
-      await cache.save(value);
+      await cache.save('products', value);
     }
     return value;
-  })
+  });
+
+  return [state];
+}
+
+export const useProductDetail = (productId) => {
+  const [state] = useState(async () => {
+    let value = await cache.get(`product-${productId}`);
+    if (!value) {
+      value = await facade.getDetail(productId);
+      await cache.save(`product-${productId}`, value);
+    }
+    return value;
+  });
 
   return [state];
 }
