@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Col, Row} from "react-bootstrap";
 import {ListItem} from "../list-item/list-item";
-import {ProductService} from "../../../../core/product/product.service";
+import {ProductService, useProductList} from "../../../../core/product/product.service";
 import {ProductContext} from "../../../../core/context/product.context";
 import {LoadingSpinner} from "../../../../shared/components/loading-spinner/loading-spinner";
 
@@ -13,15 +13,14 @@ export const ListView = () => {
   } = useContext(ProductContext);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [getProductList] = useProductList([]);
 
   useEffect(() => {
-    productService.getProductList().then(
-      products => {
-        setProducts(products);
-        setFilteredProducts(products);
-        setLoading(false);
-      }
-    ).catch(() => {
+    getProductList.then(products => {
+      setProducts(products);
+      setFilteredProducts(products);
+      setLoading(false);
+    }).catch(() => {
       setLoading(false);
     });
   }, []);

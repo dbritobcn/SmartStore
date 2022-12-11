@@ -33,7 +33,11 @@ export const ProductDetailPage = () => {
           <LoadingSpinner/>
         </Row>
       )}
-      <BackButton />
+      <Row>
+        <Col className="mb-3">
+          <BackButton />
+        </Col>
+      </Row>
       {product && (
         <Row>
           <Col md={4} lg={6}>

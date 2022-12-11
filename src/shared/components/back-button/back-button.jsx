@@ -6,6 +6,8 @@ export const BackButton = () => {
   const navigate = useNavigate();
 
   return (
-    <Button variant="outline-dark" onClick={() => navigate(-1)}>Back</Button>
+    <Button variant="outline-dark"
+            size="sm"
+            onClick={() => navigate(-1)}>Back</Button>
   )
 }

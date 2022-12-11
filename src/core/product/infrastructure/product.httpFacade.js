@@ -1,6 +1,6 @@
 import {Product} from "../domain/product";
 
-export class ProductFacade {
+export class ProductHttpFacade {
   async getList() {
     try {
       return await fetch(`${process.env.REACT_APP_API_URL}/product`, {

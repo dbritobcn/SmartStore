@@ -19,15 +19,24 @@ function App() {
       children: [
         {
           path: '',
-          element: <Navigate to="products" replace/>
+          element: <Navigate to="products" replace/>,
+          // handle: {
+          //   crumbs: () => <Link to="products">Home</Link>,
+          // }
         },
         {
-          path: "products/",
+          path: "/products",
           element: <ProductListPage/>,
+          // handle: {
+          //   crumbs: () => <Link to="products">Products</Link>,
+          // }
         },
         {
-          path: "products/:productId",
+          path: "/products/:productId",
           element: <ProductDetailPage/>,
+          // handle: {
+          //   crumb: (data) => <span>iPhone</span>,
+          // }
         },
       ]
     },
