@@ -9,7 +9,7 @@ export const ListItem = (props) => {
 
   return (
     <Link to={`${product.id}`}>
-      <Card className="list-item">
+      <Card className="list-item" data-cy="listItem">
         <Card.Img src={thumbnailUrl} className="my-3 mx-auto w-75"></Card.Img>
         <Card.Body>
           <Card.Subtitle>{product.brand}</Card.Subtitle>

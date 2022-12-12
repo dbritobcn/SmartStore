@@ -1,0 +1,41 @@
+{
+  "id": "0001",
+  "brand": "Apple",
+  "model": "iPhone SE",
+  "image_url": "347182_28749f58-2f2f-447a-b432-90be32f418dd.webp",
+  "price": 245,
+  "cpu": "A1",
+  "ram": "3Gb",
+  "so": "ios",
+  "screen_resolution": "1334x750",
+  "battery": "lithium-ion",
+  "camera": "12Mp",
+  "size": "4,7",
+  "weight": "148g",
+  "colors": [
+    {
+      "id": "0001",
+      "title": "Black",
+      "code": "#1F1E24"
+    },
+    {
+      "id": "0002",
+      "title": "White",
+      "code": "#F9F5F4"
+    }
+  ],
+  "storages": [
+    {
+      "id": "0001",
+      "title": "64Gb"
+    },
+    {
+      "id": "0002",
+      "title": "128Gb"
+    },
+    {
+      "id": "0003",
+      "title": "256Gb"
+    }
+  ]
+}

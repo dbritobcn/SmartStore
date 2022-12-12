@@ -27,7 +27,7 @@ export const ProductActions = (props) => {
                       property="color"></ButtonSelector>
       <Row>
         <Col>
-          <Button variant="dark" size="lg" className="w-100" onClick={handleAddToCart}>Add to cart</Button>
+          <Button variant="dark" size="lg" className="w-100" onClick={handleAddToCart} data-cy="addCartButton">Add to cart</Button>
         </Col>
       </Row>
     </div>

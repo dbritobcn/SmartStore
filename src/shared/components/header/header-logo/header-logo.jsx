@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import './header-logo.scss';
 
 export const HeaderLogo = () => (
-  <Link to={'/'} className="logo">
+  <Link to={'/'} className="logo" data-cy="logo">
     <Image src={logo} alt="logo" className="logo__image" />
   </Link>
 )

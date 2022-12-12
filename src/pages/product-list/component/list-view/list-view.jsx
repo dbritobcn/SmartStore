@@ -40,7 +40,8 @@ export const ListView = () => {
       {!loading && !filteredProducts.length && <p>No products</p>}
       {filteredProducts.map(product => (
         <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-3">
-          <ListItem product={product}></ListItem>
+          <ListItem product={product}
+                    data-testid="list-item"></ListItem>
         </Col>
       ))}
     </>

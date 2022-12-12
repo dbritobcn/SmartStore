@@ -36,7 +36,6 @@ describe('Product HTTP Facade', () => {
           return res(ctx.status(500))
         }),
       );
-      await facade.getList();
       await expect(() => facade.getList()).toThrow();
     });
   });

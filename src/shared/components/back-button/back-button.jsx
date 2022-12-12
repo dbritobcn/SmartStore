@@ -8,6 +8,10 @@ export const BackButton = () => {
   return (
     <Button variant="outline-dark"
             size="sm"
-            onClick={() => navigate(-1)}>Back</Button>
+            onClick={() => {
+              console.log("CLICK");
+              navigate(-1)
+            }}
+            data-cy="backButton">Back</Button>
   )
 }

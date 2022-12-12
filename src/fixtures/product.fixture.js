@@ -14,8 +14,32 @@ export const productFixture = {
   "camera": "12Mp",
   "size": "4,7",
   "weight": "148g",
-  "colors": ["0001", "0002"],
-  "storages": ["0001", "0002", "0003"]
+  "colors": [
+    {
+      "id": "0001",
+      "title": "Black",
+      "code": "#1F1E24"
+    },
+    {
+      "id": "0002",
+      "title": "White",
+      "code": "#F9F5F4"
+    }
+  ],
+  "storages": [
+    {
+      "id": "0001",
+      "title": "64Gb"
+    },
+    {
+      "id": "0002",
+      "title": "128Gb"
+    },
+    {
+      "id": "0003",
+      "title": "256Gb"
+    }
+  ]
 };
 
 export const product2Fixture = {
@@ -32,8 +56,32 @@ export const product2Fixture = {
   "camera": "12Mp",
   "size": "6,55",
   "weight": "148g",
-  "colors": ["0001", "0002"],
-  "storages": ["0001", "0002", "0003"]
+  "colors": [
+    {
+      "id": "0001",
+      "title": "Black",
+      "code": "#1F1E24"
+    },
+    {
+      "id": "0002",
+      "title": "White",
+      "code": "#F9F5F4"
+    }
+  ],
+  "storages": [
+    {
+      "id": "0001",
+      "title": "64Gb"
+    },
+    {
+      "id": "0002",
+      "title": "128Gb"
+    },
+    {
+      "id": "0003",
+      "title": "256Gb"
+    }
+  ]
 };
 
 export const productWithoutBrandFixture = {
@@ -49,8 +97,32 @@ export const productWithoutBrandFixture = {
   "camera": "12Mp",
   "size": "4,7",
   "weight": "148g",
-  "colors": ["0001", "0002"],
-  "storages": ["0001", "0002", "0003", "0004", "0005", "0006"]
+  "colors": [
+    {
+      "id": "0001",
+      "title": "Black",
+      "code": "#1F1E24"
+    },
+    {
+      "id": "0002",
+      "title": "White",
+      "code": "#F9F5F4"
+    }
+  ],
+  "storages": [
+    {
+      "id": "0001",
+      "title": "64Gb"
+    },
+    {
+      "id": "0002",
+      "title": "128Gb"
+    },
+    {
+      "id": "0003",
+      "title": "256Gb"
+    }
+  ]
 };
 
 export const productListFixture = [productFixture, product2Fixture].map(Product.createFromDB);

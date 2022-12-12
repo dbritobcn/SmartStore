@@ -18,7 +18,7 @@ export const ButtonSelector = (props) => {
 
   return (
     <div className="button-selector mt-2 mb-5">
-      <ButtonGroup className="w-100 mb-2">
+      <ButtonGroup className="w-100 mb-2" data-cy="buttonGroup">
         {options.map((radio, id) => (
           <ToggleButton
             key={id}
