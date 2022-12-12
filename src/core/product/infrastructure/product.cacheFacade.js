@@ -1,6 +1,4 @@
 export class ProductCacheFacade {
-  expirationTime = 3600000;
-
   async get(key) {
     try {
       const value = localStorage.getItem(key);
@@ -16,13 +14,13 @@ export class ProductCacheFacade {
     }
   }
 
-  async save(key, value, expiration = false) {
+  async save(key, value, expiration = 3600000) {
     try {
       const now = new Date();
-      const data = (expiration) ?
+      const data = (expiration > 0) ?
         {
           data: value,
-          expiry: now.getTime() + this.expirationTime,
+          expiry: now.getTime() + expiration,
         } :
         {
           data: value

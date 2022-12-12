@@ -3,15 +3,15 @@ import {ProductHttpFacade} from "./infrastructure/product.httpFacade";
 import {ProductCacheFacade} from "./infrastructure/product.cacheFacade";
 import {ProductDto} from "./mappers/product.dto";
 
-const facade = new ProductHttpFacade();
+const http = new ProductHttpFacade();
 const cache = new ProductCacheFacade();
 
 export const useProductList = () => {
   const [state] = useState(async () => {
     let value = await cache.get('products');
     if (!value) {
-      value = await facade.getList();
-      await cache.save('products', value, true);
+      value = await http.getList();
+      await cache.save('products', value);
     }
     return value;
   });
@@ -23,8 +23,8 @@ export const useProductDetail = (productId) => {
   const [state] = useState(async () => {
     let value = await cache.get(`product-${productId}`);
     if (!value) {
-      value = await facade.getDetail(productId);
-      await cache.save(`product-${productId}`, value, true);
+      value = await http.getDetail(productId);
+      await cache.save(`product-${productId}`, value);
     }
     return value;
   });
@@ -38,12 +38,12 @@ export const getCartCount = async () => {
 }
 
 export const addToCart = async (props) => {
-  const response = await facade.sendProduct(
+  const response = await http.sendProduct(
     ProductDto.sendProductToCart(props)
   );
   let cartCounter = 0;
   let value = await cache.get(`cart`);
   cartCounter = (value) ? value + 1 : cartCounter + 1;
-  await cache.save(`cart`, cartCounter);
+  await cache.save(`cart`, cartCounter, 0);
   return cartCounter;
 }

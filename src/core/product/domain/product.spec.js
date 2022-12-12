@@ -5,10 +5,11 @@ describe('Product', () => {
   it("should create from DB successfully", () => {
     const product = Product.createFromDB(productFixture);
     expect(product).toBeInstanceOf(Product);
+    expect(product.brand).toBe(productFixture.brand);
   });
 
-  xit("should get wrong parameters and fail", () => {
-    const product = () => Product.createFromDB(productWithoutBrandFixture);
-    expect(product).toThrow('Wrong product params');
+  it("should get wrong parameters and fail", () => {
+    const product = Product.createFromDB(productWithoutBrandFixture);
+    expect(product.brand).toBeUndefined();
   });
 });
