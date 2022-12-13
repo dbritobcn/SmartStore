@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Col, Row} from "react-bootstrap";
 import {ListItem} from "../list-item/list-item";
-import {useProductList} from "../../../../product.service";
+import {useProductList} from "../../../../hooks/useProductList";
 import {LoadingSpinner} from "../../../../../shared/components/loading-spinner/loading-spinner";
 import {ProductContext} from "../../../../context/product.context";
 

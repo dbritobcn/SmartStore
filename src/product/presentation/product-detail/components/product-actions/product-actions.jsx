@@ -1,8 +1,8 @@
 import React, {useContext, useState} from "react";
 import {Button, Col, Row} from "react-bootstrap";
-import {addToCart} from "../../../../product.service";
 import {ButtonSelector} from "../../../../../shared/components/button-selector/button-selector";
 import {ProductContext} from "../../../../context/product.context";
+import {addToCart} from "../../../../service/product.service";
 
 export const ProductActions = (props) => {
   const {id, colors, storages} = props.product;

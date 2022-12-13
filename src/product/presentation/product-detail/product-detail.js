@@ -4,10 +4,10 @@ import {Col, Container, Row} from "react-bootstrap";
 import {ProductImage} from "./components/product-image/product-image";
 import {ProductDescription} from "./components/product-description/product-description";
 import {ProductActions} from "./components/product-actions/product-actions";
-import {useProductDetail} from "../../product.service";
 import {LoadingSpinner} from "../../../shared/components/loading-spinner/loading-spinner";
 import {Breadcrumbs} from "../../../shared/components/breadcrumbs/breadcrumbs";
 import {BackButton} from "../../../shared/components/back-button/back-button";
+import {useProductDetail} from "../../hooks/useProductDetail";
 
 export const ProductDetailPage = () => {
   const {productId} = useParams();
