@@ -1,11 +1,11 @@
-import {useProducts} from "./core/product/hooks/useProducts";
-import {ProductContext} from "./core/context/product.context";
-import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
-import {ErrorPage} from "./pages/error/error";
 import React from "react";
-import {RootPage} from "./pages/root/root";
-import {ProductDetailPage} from "./pages/product-detail/product-detail";
-import {ProductListPage} from "./pages/product-list/product-list";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
+import {ProductContext} from "./product/context/product.context";
+import {useProducts} from "./product/hooks/useProducts";
+import {ProductDetailPage} from "./product/presentation/product-detail/product-detail";
+import {ProductListPage} from "./product/presentation/product-list/product-list";
+import {RootPage} from "./shared/components/root/root";
+import {ErrorPage} from "./shared/components/error/error";
 
 function App() {
   const state = useProducts();

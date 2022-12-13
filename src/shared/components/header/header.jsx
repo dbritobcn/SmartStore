@@ -2,8 +2,8 @@ import React from 'react';
 import "./header.scss";
 import Navbar from 'react-bootstrap/Navbar';
 import {Container, Row} from "react-bootstrap";
-import {HeaderCart} from "./header-cart/header-cart";
 import {HeaderLogo} from "./header-logo/header-logo";
+import {CartCounter} from "../../../product/presentation/cart-counter/cart-counter";
 
 export const Header = () => {
   return (
@@ -12,7 +12,7 @@ export const Header = () => {
         <Container className="h-100">
           <Row className="justify-content-between align-items-center h-100 w-100">
             <HeaderLogo/>
-            <HeaderCart></HeaderCart>
+            <CartCounter></CartCounter>
           </Row>
         </Container>
       </Navbar>
