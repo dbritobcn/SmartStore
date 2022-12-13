@@ -14,9 +14,6 @@ export const addToCart = async (props) => {
   const response = await http.sendProduct(
     ProductDto.sendToCart(props)
   );
-  let cartCounter = 0;
-  let value = await cache.get(`cart`);
-  cartCounter = (value) ? value + 1 : cartCounter + 1;
-  await cache.save(`cart`, cartCounter, 0);
-  return cartCounter;
+  await cache.save(`cart`, response.count, 0);
+  return response.count;
 }

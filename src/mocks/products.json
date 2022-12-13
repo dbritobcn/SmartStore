@@ -1,0 +1,361 @@
+[
+  {
+    "id": "0001",
+    "brand": "Apple",
+    "model": "iPhone SE",
+    "image_url": "347182_28749f58-2f2f-447a-b432-90be32f418dd.webp",
+    "price": 245,
+    "cpu": "A1",
+    "ram": "3Gb",
+    "so": "ios",
+    "screen_resolution": "1334x750",
+    "battery": "lithium-ion",
+    "camera": "12Mp",
+    "size": "4,7",
+    "weight": "148g",
+    "colors": [
+      {
+        "id": "0001",
+        "title": "Black",
+        "code": "#1F1E24"
+      },
+      {
+        "id": "0002",
+        "title": "White",
+        "code": "#F9F5F4"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0001",
+        "title": "64Gb"
+      },
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      }
+    ]
+  },
+  {
+    "id": "0002",
+    "brand": "Apple",
+    "model": "iPhone 12",
+    "image_url": "418116_fc4241f2-2a8a-46fb-9daf-effd461ec876.avif",
+    "price": 599,
+    "cpu": "A1",
+    "ram": "3Gb",
+    "so": "ios",
+    "screen_resolution": "1334x750",
+    "battery": "lithium-ion",
+    "camera": "12Mp",
+    "size": "4,7",
+    "weight": "148g",
+    "colors": [
+      {
+        "id": "0001",
+        "title": "Black",
+        "code": "#1F1E24"
+      },
+      {
+        "id": "0002",
+        "title": "White",
+        "code": "#F9F5F4"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0001",
+        "title": "64Gb"
+      },
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      },
+      {
+        "id": "0004",
+        "title": "512Gb"
+      }
+    ]
+  },
+  {
+    "id": "0003",
+    "brand": "Apple",
+    "model": "iPhone 11 Pro",
+    "image_url": "290033_0ab7d40b-62b4-4c5c-aa8a-10b6faac8f10.webp",
+    "price": 809,
+    "cpu": "A1",
+    "ram": "3Gb",
+    "so": "ios",
+    "screen_resolution": "1334x750",
+    "battery": "lithium-ion",
+    "camera": "12Mp",
+    "size": "4,7",
+    "weight": "148g",
+    "colors": [
+      {
+        "id": "0007",
+        "title": "Gold",
+        "code": "#FBD7BD"
+      },
+      {
+        "id": "0008",
+        "title": "Gray Space",
+        "code": "#52514F"
+      },
+      {
+        "id": "0009",
+        "title": "Night Green",
+        "code": "#4E5752"
+      },
+      {
+        "id": "0010",
+        "title": "Silver",
+        "code": "#E9E9E1"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      },
+      {
+        "id": "0004",
+        "title": "512Gb"
+      }
+    ]
+  },
+  {
+    "id": "0004",
+    "brand": "Oppo",
+    "model": "Find X3 Neo",
+    "image_url": "472715_7bcd16bd-97e7-44d8-a2b7-0f4a3d7efacd.webp",
+    "price": 999,
+    "cpu": "Core i5",
+    "ram": "12Gb",
+    "so": "android",
+    "screen_resolution": "1080x2400",
+    "battery": "lithium-ion",
+    "camera": "50Mp",
+    "size": "6,55",
+    "weight": "184g",
+    "colors": [
+      {
+        "id": "0001",
+        "title": "Black",
+        "code": "#1F1E24"
+      },
+      {
+        "id": "0010",
+        "title": "Silver",
+        "code": "#E9E9E1"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      }
+    ]
+  },
+  {
+    "id": "0005",
+    "brand": "Apple",
+    "model": "iPhone 11",
+    "image_url": "290063_55cd050a-80b9-48fa-93f7-494c97003dda.avif",
+    "price": 639,
+    "cpu": "A1",
+    "ram": "3Gb",
+    "so": "ios",
+    "screen_resolution": "1334x750",
+    "battery": "lithium-ion",
+    "camera": "12Mp",
+    "size": "4,7",
+    "weight": "148g",
+    "colors": [
+      {
+        "id": "0007",
+        "title": "Gold",
+        "code": "#FBD7BD"
+      },
+      {
+        "id": "0008",
+        "title": "Gray Space",
+        "code": "#52514F"
+      },
+      {
+        "id": "0009",
+        "title": "Night Green",
+        "code": "#4E5752"
+      },
+      {
+        "id": "0010",
+        "title": "Silver",
+        "code": "#E9E9E1"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      },
+      {
+        "id": "0004",
+        "title": "512Gb"
+      },
+      {
+        "id": "0005",
+        "title": "1024Gb"
+      }
+    ]
+  },
+  {
+    "id": "0006",
+    "brand": "Apple",
+    "model": "iPhone 12",
+    "image_url": "418116_fc4241f2-2a8a-46fb-9daf-effd461ec877.avif",
+    "price": 859,
+    "cpu": "A1",
+    "ram": "3Gb",
+    "so": "ios",
+    "screen_resolution": "1334x750",
+    "battery": "lithium-ion",
+    "camera": "12Mp",
+    "size": "4,7",
+    "weight": "148g",
+    "colors": [
+      {
+        "id": "0007",
+        "title": "Gold",
+        "code": "#FBD7BD"
+      },
+      {
+        "id": "0008",
+        "title": "Gray Space",
+        "code": "#52514F"
+      },
+      {
+        "id": "0009",
+        "title": "Night Green",
+        "code": "#4E5752"
+      },
+      {
+        "id": "0010",
+        "title": "Silver",
+        "code": "#E9E9E1"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0001",
+        "title": "64Gb"
+      },
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      },
+      {
+        "id": "0004",
+        "title": "512Gb"
+      }
+    ]
+  },
+  {
+    "id": "0007",
+    "brand": "OnePlus",
+    "model": "8 Pro",
+    "image_url": "340903_b9342fad-8be0-432b-a622-b434382fcd9e.avif",
+    "price": 899,
+    "cpu": "Core i5",
+    "ram": "8Gb",
+    "so": "android",
+    "screen_resolution": "1080x2400",
+    "battery": "lithium-ion",
+    "camera": "48Mp",
+    "size": "6,78",
+    "weight": "199g",
+    "colors": [
+      {
+        "id": "0001",
+        "title": "Black",
+        "code": "#1F1E24"
+      },
+      {
+        "id": "0004",
+        "title": "Blue",
+        "code": "#033357"
+      },
+      {
+        "id": "0006",
+        "title": "Green",
+        "code": "#DDF4DA"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0002",
+        "title": "128Gb"
+      },
+      {
+        "id": "0003",
+        "title": "256Gb"
+      }
+    ]
+  },
+  {
+    "id": "0008",
+    "brand": "OnePlus",
+    "model": "Nord",
+    "image_url": "12b80d0b-7fdd-4aa4-9d95-520e53164777.avif",
+    "price": 500,
+    "cpu": "Core i5",
+    "ram": "8Gb",
+    "so": "android",
+    "screen_resolution": "1080x2400",
+    "battery": "lithium-ion",
+    "camera": "48Mp",
+    "size": "6,44",
+    "weight": "184g",
+    "colors": [
+      {
+        "id": "0004",
+        "title": "Blue",
+        "code": "#033357"
+      },
+      {
+        "id": "0008",
+        "title": "Gray Space",
+        "code": "#52514F"
+      }
+    ],
+    "storages": [
+      {
+        "id": "0002",
+        "title": "128Gb"
+      }
+    ]
+  }
+]

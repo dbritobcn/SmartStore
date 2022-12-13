@@ -1,4 +1,4 @@
-# Mobile Store
+# Smart Store
 
 Ésta es una aplicación de venta de dispositivos moviles desarrollada con React.
 
@@ -8,16 +8,26 @@ El proyecto fue creado a través de [Create React App](https://github.com/facebo
 
 Para arrancar el proyecto, debemos instalar las dependencias con el comando `npm install`.
 
-Una vez tenemos las dependencias instaladas, usamos el comando `npm run server` para arrancar el local server en el [puerto 8000](http://localhost:8000).
-
-Una vez el servidor local está funcionando, ya podemos usar el comando `npm start` para arrancar el proyecto bajo un entorno de desarrollo. Esto nos habilitará el enlace [http://localhost:3000](http://localhost:3000).
-
 ## Scripts disponibles
 
 ### `npm start`
 
+Usamos este comando para arrancar el proyecto bajo un entorno de desarrollo. Esto nos habilitará el enlace [http://localhost:3000](http://localhost:3000).
+
+La página se volverá a cargar cuando realicemos cambios.
+También podremos ver los errores y warnings del linter en la consola.
+
 ### `npm test`
+
+Lanza el test runner en modo watch.
 
 ### `npm run build`
 
+Construye la aplicación para producción en la carpeta `build`.\
+Empaqueta React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
+
+La compilación se minimiza y los nombres de archivo incluyen los hashes.\
+
 ### `npm run lint`
+
+Ejecuta el linter.

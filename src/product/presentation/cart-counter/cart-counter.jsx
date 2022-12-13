@@ -11,14 +11,14 @@ export const CartCounter = () => {
 
   useEffect(() => {
     getCartCount().then((data) => {
-        setCartCount(data);
+      setCartCount(data);
     });
-  }, []);
+  }, [cartCount]);
 
   return (
     <div className="header-cart">
       <Image src={CartImage}></Image>
-      {cartCount > 0 && <Badge bg="secondary">{cartCount}</Badge>}
+      <Badge bg="secondary">{cartCount}</Badge>
     </div>
   )
 }

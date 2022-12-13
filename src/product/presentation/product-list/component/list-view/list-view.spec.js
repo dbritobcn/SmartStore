@@ -1,8 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {ListView} from './list-view';
-import {productListFixture} from "../../../../fixtures/product.fixture";
 import {useProductList} from "../../../../core/product/product.service";
+import {productListFixture} from "../../../../../fixtures/product.fixture";
 
 jest.mock('../../../../core/product/product.service');
 
