@@ -2,7 +2,7 @@ import React from "react";
 import {Breadcrumb} from "react-bootstrap";
 import {Link, useParams} from "react-router-dom";
 
-export const Breadcrumbs = (props) => {
+export const Breadcrumbs = ({title}) => {
   const {productId} = useParams();
 
   const links = [
@@ -18,7 +18,7 @@ export const Breadcrumbs = (props) => {
 
   if (productId) {
     links.push({
-      title: props.title || 'product',
+      title: title || 'product',
       url: `/products/${productId}`,
     });
   }

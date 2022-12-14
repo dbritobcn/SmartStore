@@ -1,9 +1,9 @@
 import {ProductDto} from "../mappers/product.dto";
 
 export class ProductHttpFacade {
-  async getList() {
+  getList() {
     try {
-      return await fetch(`${process.env.REACT_APP_API_URL}/product`, {
+      return fetch(`${process.env.REACT_APP_API_URL}/product`, {
         method: "GET"
       })
         .then(response => response.json())

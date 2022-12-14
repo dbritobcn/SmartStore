@@ -4,8 +4,8 @@ import {ButtonSelector} from "../../../../../shared/components/button-selector/b
 import {ProductContext} from "../../../../context/product.context";
 import {addToCart} from "../../../../service/product.service";
 
-export const ProductActions = (props) => {
-  const {id, colors, storages} = props.product;
+export const ProductActions = ({product}) => {
+  const {id, colors, storages} = product;
   const {setCartCount} = useContext(ProductContext);
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedStorage, setSelectedStorage] = useState(null);

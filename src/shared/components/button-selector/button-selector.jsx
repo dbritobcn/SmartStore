@@ -2,18 +2,17 @@ import React, {useEffect, useState} from "react";
 import "./button-selector.scss";
 import {ButtonGroup, ToggleButton} from "react-bootstrap";
 
-export const ButtonSelector = (props) => {
+export const ButtonSelector = ({options, property, optionChange}) => {
   const [radioValue, setRadioValue] = useState(null);
-  const {options, property} = props;
 
   useEffect(() => {
     if (options.length) setRadioValue(options[0].id);
     optionChange(options[0].id);
   }, [options]);
 
-  const optionChange = (value) => {
+  const handleOptionChange = (value) => {
     setRadioValue(value);
-    props.optionChange(value);
+    optionChange(value);
   }
 
   return (
@@ -29,7 +28,7 @@ export const ButtonSelector = (props) => {
             name={`${property}-radio`}
             value={radio.id}
             checked={radioValue === radio.id}
-            onChange={(e) => optionChange(e.currentTarget.value)}
+            onChange={(e) => handleOptionChange(e.currentTarget.value)}
           >
             {radio.title}
             {radio.code && <span className="button-selector__color-indicator" style={{backgroundColor: radio.code}}></span>}

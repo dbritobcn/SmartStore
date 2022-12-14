@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
 
-export const ProductImage = (props) => {
-  const imageUrl = require(`../../../../../assets/images/${props.imageUrl}`);
+export const ProductImage = ({imageUrl}) => {
+  const image = require(`../../../../../assets/images/${imageUrl}`);
 
   return (
-    <Image src={imageUrl} fluid={true}></Image>
+    <Image src={image} fluid={true}></Image>
   )
 }

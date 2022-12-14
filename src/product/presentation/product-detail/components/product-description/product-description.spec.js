@@ -1,11 +1,11 @@
 import {render, screen} from "@testing-library/react";
 import {ProductDescription} from "./product-description";
-import {productFixture} from "../../../../fixtures/product.fixture";
-import {Product} from "../../../../core/product/domain/product";
+import productFixture from "../../../../../mocks/products.json";
+import {ProductDto} from "../../../../mappers/product.dto";
 
 describe('Product description component', () => {
   it('should render appropriately', () => {
-    render(<ProductDescription product={Product.createFromDB(productFixture)} />)
+    render(<ProductDescription product={ProductDto.createFromDB(productFixture[0])} />)
     expect(screen.getByText('iPhone SE')).toBeInTheDocument();
   });
 });

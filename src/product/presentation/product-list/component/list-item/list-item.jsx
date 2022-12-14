@@ -3,9 +3,8 @@ import {Card} from "react-bootstrap";
 import './list-item.scss';
 import {useNavigate} from "react-router-dom";
 
-export const ListItem = (props) => {
+export const ListItem = ({product}) => {
   const navigate = useNavigate();
-  const {product} = props;
   const thumbnailUrl = require(`../../../../../assets/images/${product.imageUrl}`);
 
   const goToDetail = () => {

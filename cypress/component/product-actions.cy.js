@@ -2,7 +2,7 @@
 
 import React from "react";
 import * as product from '../fixtures/product.json';
-import {ProductActions} from "../../src/pages/product-detail/components/product-actions/product-actions";
+import {ProductActions} from "../../src/product/presentation/product-detail/components/product-actions/product-actions";
 
 describe('product-actions.cy.js', () => {
   it('Dom', () => {

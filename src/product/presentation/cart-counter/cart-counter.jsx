@@ -18,7 +18,7 @@ export const CartCounter = () => {
   return (
     <div className="header-cart">
       <Image src={CartImage}></Image>
-      <Badge bg="secondary">{cartCount}</Badge>
+      {cartCount > 0 && <Badge bg="secondary">{cartCount}</Badge>}
     </div>
   )
 }

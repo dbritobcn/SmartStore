@@ -1,6 +1,6 @@
 /* global cy, before */
 
-import {ProductDescription} from "../../src/pages/product-detail/components/product-description/product-description";
+import {ProductDescription} from "../../src/product/presentation/product-detail/components/product-description/product-description";
 import React from "react";
 import * as product from '../fixtures/product.json';
 

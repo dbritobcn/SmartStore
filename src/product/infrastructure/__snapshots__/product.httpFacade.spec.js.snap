@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product HTTP Facade getList should return a list of products successfully 1`] = `
+Array [
+  Object {
+    "battery": "lithium-ion",
+    "brand": "Apple",
+    "camera": "12Mp",
+    "colors": Array [
+      Object {
+        "code": "#1F1E24",
+        "id": "0001",
+        "title": "Black",
+      },
+      Object {
+        "code": "#F9F5F4",
+        "id": "0002",
+        "title": "White",
+      },
+    ],
+    "cpu": "A1",
+    "id": "0001",
+    "imageUrl": "347182_28749f58-2f2f-447a-b432-90be32f418dd.webp",
+    "model": "iPhone SE",
+    "price": 245,
+    "ram": "3Gb",
+    "screenResolution": "1334x750",
+    "size": "4,7",
+    "so": "ios",
+    "storages": Array [
+      Object {
+        "id": "0001",
+        "title": "64Gb",
+      },
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+    ],
+    "weight": "148g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "Apple",
+    "camera": "12Mp",
+    "colors": Array [
+      Object {
+        "code": "#1F1E24",
+        "id": "0001",
+        "title": "Black",
+      },
+      Object {
+        "code": "#F9F5F4",
+        "id": "0002",
+        "title": "White",
+      },
+    ],
+    "cpu": "A1",
+    "id": "0002",
+    "imageUrl": "418116_fc4241f2-2a8a-46fb-9daf-effd461ec876.avif",
+    "model": "iPhone 12",
+    "price": 599,
+    "ram": "3Gb",
+    "screenResolution": "1334x750",
+    "size": "4,7",
+    "so": "ios",
+    "storages": Array [
+      Object {
+        "id": "0001",
+        "title": "64Gb",
+      },
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+      Object {
+        "id": "0004",
+        "title": "512Gb",
+      },
+    ],
+    "weight": "148g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "Apple",
+    "camera": "12Mp",
+    "colors": Array [
+      Object {
+        "code": "#FBD7BD",
+        "id": "0007",
+        "title": "Gold",
+      },
+      Object {
+        "code": "#52514F",
+        "id": "0008",
+        "title": "Gray Space",
+      },
+      Object {
+        "code": "#4E5752",
+        "id": "0009",
+        "title": "Night Green",
+      },
+      Object {
+        "code": "#E9E9E1",
+        "id": "0010",
+        "title": "Silver",
+      },
+    ],
+    "cpu": "A1",
+    "id": "0003",
+    "imageUrl": "290033_0ab7d40b-62b4-4c5c-aa8a-10b6faac8f10.webp",
+    "model": "iPhone 11 Pro",
+    "price": 809,
+    "ram": "3Gb",
+    "screenResolution": "1334x750",
+    "size": "4,7",
+    "so": "ios",
+    "storages": Array [
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+      Object {
+        "id": "0004",
+        "title": "512Gb",
+      },
+    ],
+    "weight": "148g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "Oppo",
+    "camera": "50Mp",
+    "colors": Array [
+      Object {
+        "code": "#1F1E24",
+        "id": "0001",
+        "title": "Black",
+      },
+      Object {
+        "code": "#E9E9E1",
+        "id": "0010",
+        "title": "Silver",
+      },
+    ],
+    "cpu": "Core i5",
+    "id": "0004",
+    "imageUrl": "472715_7bcd16bd-97e7-44d8-a2b7-0f4a3d7efacd.webp",
+    "model": "Find X3 Neo",
+    "price": 999,
+    "ram": "12Gb",
+    "screenResolution": "1080x2400",
+    "size": "6,55",
+    "so": "android",
+    "storages": Array [
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+    ],
+    "weight": "184g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "Apple",
+    "camera": "12Mp",
+    "colors": Array [
+      Object {
+        "code": "#FBD7BD",
+        "id": "0007",
+        "title": "Gold",
+      },
+      Object {
+        "code": "#52514F",
+        "id": "0008",
+        "title": "Gray Space",
+      },
+      Object {
+        "code": "#4E5752",
+        "id": "0009",
+        "title": "Night Green",
+      },
+      Object {
+        "code": "#E9E9E1",
+        "id": "0010",
+        "title": "Silver",
+      },
+    ],
+    "cpu": "A1",
+    "id": "0005",
+    "imageUrl": "290063_55cd050a-80b9-48fa-93f7-494c97003dda.avif",
+    "model": "iPhone 11",
+    "price": 639,
+    "ram": "3Gb",
+    "screenResolution": "1334x750",
+    "size": "4,7",
+    "so": "ios",
+    "storages": Array [
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+      Object {
+        "id": "0004",
+        "title": "512Gb",
+      },
+      Object {
+        "id": "0005",
+        "title": "1024Gb",
+      },
+    ],
+    "weight": "148g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "Apple",
+    "camera": "12Mp",
+    "colors": Array [
+      Object {
+        "code": "#FBD7BD",
+        "id": "0007",
+        "title": "Gold",
+      },
+      Object {
+        "code": "#52514F",
+        "id": "0008",
+        "title": "Gray Space",
+      },
+      Object {
+        "code": "#4E5752",
+        "id": "0009",
+        "title": "Night Green",
+      },
+      Object {
+        "code": "#E9E9E1",
+        "id": "0010",
+        "title": "Silver",
+      },
+    ],
+    "cpu": "A1",
+    "id": "0006",
+    "imageUrl": "418116_fc4241f2-2a8a-46fb-9daf-effd461ec877.avif",
+    "model": "iPhone 12",
+    "price": 859,
+    "ram": "3Gb",
+    "screenResolution": "1334x750",
+    "size": "4,7",
+    "so": "ios",
+    "storages": Array [
+      Object {
+        "id": "0001",
+        "title": "64Gb",
+      },
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+      Object {
+        "id": "0004",
+        "title": "512Gb",
+      },
+    ],
+    "weight": "148g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "OnePlus",
+    "camera": "48Mp",
+    "colors": Array [
+      Object {
+        "code": "#1F1E24",
+        "id": "0001",
+        "title": "Black",
+      },
+      Object {
+        "code": "#033357",
+        "id": "0004",
+        "title": "Blue",
+      },
+      Object {
+        "code": "#DDF4DA",
+        "id": "0006",
+        "title": "Green",
+      },
+    ],
+    "cpu": "Core i5",
+    "id": "0007",
+    "imageUrl": "340903_b9342fad-8be0-432b-a622-b434382fcd9e.avif",
+    "model": "8 Pro",
+    "price": 899,
+    "ram": "8Gb",
+    "screenResolution": "1080x2400",
+    "size": "6,78",
+    "so": "android",
+    "storages": Array [
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+      Object {
+        "id": "0003",
+        "title": "256Gb",
+      },
+    ],
+    "weight": "199g",
+  },
+  Object {
+    "battery": "lithium-ion",
+    "brand": "OnePlus",
+    "camera": "48Mp",
+    "colors": Array [
+      Object {
+        "code": "#033357",
+        "id": "0004",
+        "title": "Blue",
+      },
+      Object {
+        "code": "#52514F",
+        "id": "0008",
+        "title": "Gray Space",
+      },
+    ],
+    "cpu": "Core i5",
+    "id": "0008",
+    "imageUrl": "12b80d0b-7fdd-4aa4-9d95-520e53164777.avif",
+    "model": "Nord",
+    "price": 500,
+    "ram": "8Gb",
+    "screenResolution": "1080x2400",
+    "size": "6,44",
+    "so": "android",
+    "storages": Array [
+      Object {
+        "id": "0002",
+        "title": "128Gb",
+      },
+    ],
+    "weight": "184g",
+  },
+]
+`;
