@@ -23,7 +23,7 @@ Lanza el test runner en modo watch.
 
 ### `npm run e2e`
 
-Lanza la interfaz para ejecutar los test E2E en Cypress.
+Lanza el test runner de Cypress.
 
 ### `npm run build`
 
@@ -38,17 +38,14 @@ Ejecuta el linter.
 
 ## Estructura
 
-Se ha intentado desacoplar todo lo que se refiere a producto creando un dominio para éste. Dentro de la carpeta `product` encontramos sus hooks, servicios, facades, componentes, dtos y el contexto.
+Se entiende `producto` como un dominio. De este modo, todo lo que se refiere a producto está desacoplado del resto de la aplicación, siendo un módulo independiente.\
+En la carpeta `product` encontramos su contexto, sus rutas, hooks, servicios, facades, componentes y dtos.
 
 ## Estilos
 
 Se han usado hojas de estilo `SCSS` para:
 - Usar clases siguiendo las pautas que dicta [BEM](http://getbem.com/).
 - Cargar Bootstrap para el grid y los componentes UI.
-
-## Estado
-
-Se usa un `Context Provider` para encapsular el estado de los productos, de forma que si creáramos otra sección para, por ejemplo, el perfil de usuario, podríamos tener otro contexto que se encargue específicamente de gestionar ese estado.
 
 ## Servidor
 
