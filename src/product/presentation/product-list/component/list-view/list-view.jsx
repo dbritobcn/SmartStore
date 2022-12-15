@@ -7,27 +7,33 @@ import {ProductContext} from "../../../../context/product.context";
 
 export const ListView = () => {
   const {
-    state: {products, filters},
+    state: {filters},
     setProducts
   } = useContext(ProductContext);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [getProductList] = useProductList([]);
+  const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    getProductList.then(products => {
-      setProducts(products);
-      setFilteredProducts(products);
+    getProductList.then(response => {
+      setProducts(response);
+      setProductList(response);
+      setFilteredProducts(response);
       setLoading(false);
     }).catch(() => {
       setLoading(false);
     });
-  }, []);
+  }, [productList]);
 
   useEffect(() => {
-    if (!products) return;
-    const productList = products.filter(product => product.brand.toLowerCase().includes(filters.search.toLowerCase()) || product.model.toLowerCase().includes(filters.search.toLowerCase()));
-    setFilteredProducts(productList);
+    if (!productList) return;
+    setFilteredProducts(
+      productList
+        .filter(product =>
+          product.brand.toLowerCase().includes(filters.search.toLowerCase()) ||
+          product.model.toLowerCase().includes(filters.search.toLowerCase()))
+    );
   }, [filters])
 
   return (
