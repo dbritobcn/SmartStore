@@ -12,12 +12,12 @@ export const ListItem = ({product}) => {
   };
 
   return (
-    <Card className="list-item" data-cy="listItem" onClick={goToDetail}>
-      <Card.Img src={thumbnailUrl} className="my-3 mx-auto w-75"></Card.Img>
+    <Card className="list-item" data-cy="listItem" data-testid="listItem" onClick={goToDetail}>
+      <Card.Img data-testid="listItemImg" src={thumbnailUrl} className="my-3 mx-auto w-75"></Card.Img>
       <Card.Body>
-        <Card.Subtitle>{product.brand}</Card.Subtitle>
-        <Card.Title>{product.model}</Card.Title>
-        <Card.Text>{product.price}€</Card.Text>
+        <Card.Subtitle data-testid="listItemBrand">{product.brand}</Card.Subtitle>
+        <Card.Title data-testid="listItemModel">{product.model}</Card.Title>
+        <Card.Text data-testid="listItemPrice">{product.price}€</Card.Text>
       </Card.Body>
     </Card>
   );

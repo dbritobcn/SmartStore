@@ -22,6 +22,7 @@ export const ButtonSelector = ({options, property, optionChange}) => {
           <ToggleButton
             key={id}
             id={`${property}-${id}`}
+            data-testid={`${property}-${id}`}
             className="button-selector__button"
             type="radio"
             variant="outline-dark"
