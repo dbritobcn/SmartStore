@@ -36,6 +36,10 @@ La compilación se minimiza y los nombres de archivo incluyen los hashes.\
 
 Ejecuta el linter.
 
+## Estado
+
+Se usa `useContext` a nivel de producto para gestionar y mantener el estado del carrito de compra y de los filtros.
+
 ## Estructura
 
 Se entiende `producto` como un dominio. De este modo, todo lo que se refiere a producto está desacoplado del resto de la aplicación, siendo un módulo independiente.\

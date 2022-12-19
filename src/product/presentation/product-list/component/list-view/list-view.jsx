@@ -6,35 +6,32 @@ import {LoadingSpinner} from "../../../../../shared/components/loading-spinner/l
 import {ProductContext} from "../../../../context/product.context";
 
 export const ListView = () => {
-  const {
-    state: {filters},
-    setProducts
-  } = useContext(ProductContext);
+  const {state: {filters}} = useContext(ProductContext);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [getProductList] = useProductList([]);
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
+    setLoading(true);
     getProductList.then(response => {
-      setProducts(response);
       setProductList(response);
-      setFilteredProducts(response);
+      setFilteredProducts(filter(response));
       setLoading(false);
     }).catch(() => {
       setLoading(false);
     });
-  }, [productList]);
+  }, []);
 
   useEffect(() => {
     if (!productList) return;
-    setFilteredProducts(
-      productList
-        .filter(product =>
-          product.brand.toLowerCase().includes(filters.search.toLowerCase()) ||
-          product.model.toLowerCase().includes(filters.search.toLowerCase()))
-    );
-  }, [filters])
+    const prodList = filter(productList);
+    setFilteredProducts(prodList);
+  }, [filters]);
+
+  const filter = (products) => {
+    return products.filter(product => product.brand.toLowerCase().includes(filters.search.toLowerCase()) || product.model.toLowerCase().includes(filters.search.toLowerCase()));
+  }
 
   return (
     <>
@@ -43,13 +40,15 @@ export const ListView = () => {
           <LoadingSpinner/>
         </Row>
       )}
-      {!loading && !filteredProducts.length && <p>No products</p>}
-      {filteredProducts.map(product => (
-        <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-3">
-          <ListItem product={product}
-                    data-testid="list-item"></ListItem>
-        </Col>
-      ))}
+      {!loading && <Row>
+        {!filteredProducts.length && <p>No products</p>}
+        {filteredProducts.map(product => (
+          <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-3">
+            <ListItem product={product}
+                      data-testid="list-item"></ListItem>
+          </Col>
+        ))}
+      </Row>}
     </>
   )
 }

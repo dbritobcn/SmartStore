@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const initialState = {
-  products: [],
   cartCount: 0,
   filters: {
     search: ''
@@ -10,13 +9,6 @@ const initialState = {
 
 export const useProducts = () => {
   const [state, setState] = useState(initialState);
-
-  const setProducts = (payload) => {
-    setState({
-      ...state,
-      products: payload
-    });
-  }
 
   const setSearch = (payload) => {
     const filters = {
@@ -39,7 +31,6 @@ export const useProducts = () => {
 
   return {
     state,
-    setProducts,
     setSearch,
     setCartCount
   }
