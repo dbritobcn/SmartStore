@@ -6,7 +6,8 @@ El proyecto fue creado a través de [Create React App](https://github.com/facebo
 
 ## Para empezar
 
-Para arrancar el proyecto, debemos instalar las dependencias con el comando `npm install`.
+Para arrancar el proyecto, debemos instalar las dependencias con el comando `npm install`.\
+Es importante usar `node v16+` para no tener problemas de compatibilidad al lanzar los test.
 
 ## Scripts disponibles
 

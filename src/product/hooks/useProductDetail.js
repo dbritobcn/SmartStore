@@ -1,10 +1,7 @@
 import {useState} from "react";
-import {ProductHttpFacade} from "../infrastructure/product.httpFacade";
-import {ProductCacheFacade} from "../infrastructure/product.cacheFacade";
+import * as http from "../infrastructure/product.httpFacade";
+import * as cache from "../infrastructure/product.cacheFacade";
 import {useLocation} from "react-router-dom";
-
-const http = new ProductHttpFacade();
-const cache = new ProductCacheFacade();
 
 export const useProductDetail = (productId) => {
   const location = useLocation();

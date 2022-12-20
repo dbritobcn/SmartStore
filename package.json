@@ -2,6 +2,13 @@
   "name": "SmartStore",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "e2e": "cypress open",
+    "lint": "eslint src"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -16,12 +23,8 @@
     "sass": "^1.56.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "e2e": "cypress open",
-    "lint": "eslint src"
+  "devDependencies": {
+    "cypress": "^12.0.2"
   },
   "eslintConfig": {
     "extends": [
@@ -41,10 +44,12 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "cypress": "^12.0.2"
-  },
   "msw": {
     "workerDirectory": "public"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=16.6.1",
+    "npm": ">=7.20.3"
   }
 }

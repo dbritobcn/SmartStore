@@ -1,9 +1,8 @@
-import {ProductHttpFacade} from "./product.httpFacade";
+import * as facade from "./product.httpFacade";
 import {setupServer} from 'msw/node';
 import {rest} from "msw";
 import productFixture from "../../mocks/products.json";
 
-const facade = new ProductHttpFacade();
 const apiUrl = `${process.env.REACT_APP_API_URL}/product`;
 
 const server = setupServer(
