@@ -16,9 +16,9 @@ export const CartCounter = () => {
   }, [cartCount]);
 
   return (
-    <div className="header-cart">
-      <Image src={CartImage}></Image>
-      {cartCount > 0 && <Badge bg="secondary">{cartCount}</Badge>}
+    <div className="header-cart" data-testid="header-cart">
+      <Image data-testid="cartImage" src={CartImage}></Image>
+      {cartCount > 0 && <Badge bg="secondary" data-testid="counter">{cartCount}</Badge>}
     </div>
   )
 }

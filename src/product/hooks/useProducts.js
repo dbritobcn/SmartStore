@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const initialState = {
+const defaultState = {
   cartCount: 0,
   filters: {
     search: ''
   }
 }
 
-export const useProducts = () => {
+export const useProducts = (initialState = defaultState) => {
   const [state, setState] = useState(initialState);
 
   const setSearch = (payload) => {

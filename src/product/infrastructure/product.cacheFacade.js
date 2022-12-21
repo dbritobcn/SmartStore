@@ -13,19 +13,15 @@ export const get = async (key) => {
   }
 }
 
-export const save = async (key, value, expiration = 3600000) => {
-  try {
-    const now = new Date();
-    const data = (expiration > 0) ?
-      {
-        data: value,
-        expiry: now.getTime() + expiration,
-      } :
-      {
-        data: value
-      };
-    localStorage.setItem(key, JSON.stringify(data));
-  } catch {
-    throw new Error('Error saving cache data');
-  }
+export const save = async (key, value, ttl = 3600000) => {
+  const now = new Date();
+  const data = (ttl > 0) ?
+    {
+      data: value,
+      expiry: now.getTime() + ttl,
+    } :
+    {
+      data: value
+    };
+  localStorage.setItem(key, JSON.stringify(data));
 }

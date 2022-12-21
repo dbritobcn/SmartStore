@@ -1,11 +1,9 @@
-import {ProductCacheFacade} from "./product.cacheFacade";
+import * as productCacheFacade from "./product.cacheFacade";
 
 beforeEach(() => {
   window.localStorage.clear();
   localStorage.clear();
 });
-
-const productCacheFacade = new ProductCacheFacade();
 
 describe('ProductCacheFacade', () => {
   it('should save value to local storage', async () => {
@@ -14,7 +12,7 @@ describe('ProductCacheFacade', () => {
     expect(value).toBe('value');
   });
 
-  it('should save value with expiry date and fail getting it after expire', async () => {
+  it('should save value with expired date and fail getting it after expire', async () => {
     jest.useFakeTimers("modern");
     await productCacheFacade.save('key', 'value', 500);
     setTimeout(async () => {
